@@ -1,0 +1,30 @@
+FROM : "name of the images"(name: distribution) //(1)
+WORKDIR /app
+  
+// next layer: 
+//! Now it will copy to the /app/app
+// COPY .(path directory) /app (2)
+// 
+COPY . . //(4)
+  
+// next layer: all dependencies need to install on images
+  // - npm install: install all the dependencies listed as in the package.json file 
+    ///+ 
+// tell docker to run the image itself as this layer is being added on while the image is being build so then all the project dependencies will be install 
+RUN npm install //(3)
+//! Problem: the command is going to run inside the root directory of the image, BUT our package json file got coppied to and app folder 
+            // so that mean when this commands get run in the root folder of the of the image it wont see the package.json file in that folder
+            // so it wont install the dependencies for this to work so for that we need to specify a working folder by adding WORKDIR to the above
+  
+// containner and to make request to this api we need to send them to the port number using containner so in the docker file we can add instruction which
+  // tell Docker what port is going to be expose by the containner 
+EXPOSE : 
+
+// next layer: run the application in the containner 
+  // CMD allow us to specify any commands that should be run at runtime when the container begin to run 
+   // that is going the spin the application inside the containner
+CMD ["node", "app.js"]
+
+
+
+  to execute on the terminal: docker build -t "name of container" .
