@@ -1,0 +1,6 @@
+image (một file bất biến - không thay đổi): chứa các source code, libraries, dependencies, tools và các files khác cần thiết cho một ứng dụng để chạy.
+                                           + developers test và thử nghiệm
+container (images chỉ là các mẫu): chỉ là một image đang chạy.                                          
+
+Image có thể tồn tại mà không cần container, trong khi container chạy thì cần có image đã tồn tại. Vì vậy, container phụ thuộc vào image và sử dụng nó để tạo ra run-time environment và chạy ứng dụng trên đó.
+Để tạo ra 1 container từ 1 image, sử dụng lệnh: docker create
