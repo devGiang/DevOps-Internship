@@ -1,0 +1,140 @@
+➜  DevOps-Internship git:(3586936) ✗ npm install --save bcryptjs && npm uninstall --save bcrypt
+
+added 1 package in 446ms
+
+up to date, audited 2 packages in 436ms
+
+found 0 vulnerabilities
+➜  DevOps-Internship git:(3586936) ✗ docker run --name myapp_c_nodemon -p 4000:4000 --rm -v /home/rnd/Documents/Training/DevOps-Internship/Docker/Mar\ 5/Volumes/api:/app -v /app/node/modules myapp6:v1
+
+                                                                                                                                            
+➜  DevOps-Internship git:(3586936) ✗ npm install express --save
+
+added 64 packages, and audited 66 packages in 2s
+
+12 packages are looking for funding
+  run `npm fund` for details
+
+                                                                                                                                      
+➜  DevOps-Internship git:(3586936) ✗ docker images
+REPOSITORY   TAG        IMAGE ID       CREATED        SIZE
+myapp6       v1         296ffe4d7639   2 hours ago    178MB
+myapp        latest     c30832740da4   26 hours ago   173MB
+mymongo1     latest     dfaca011712c   4 days ago     756MB
+mymongo      latest     dfaca011712c   4 days ago     756MB
+myapp3       withoutP   765f92d63b89   4 days ago     756MB
+mongo        latest     ae65e0087c07   4 days ago     756MB
+➜  DevOps-Internship git:(3586936) ✗ ls                         
+a  Docker  node_modules  package.json  package-lock.json
+➜  DevOps-Internship git:(3586936) ✗ cd /Docker 
+cd: no such file or directory: /Docker
+➜  DevOps-Internship git:(3586936) ✗ cd Docker 
+➜  Docker git:(3586936) ✗ ls        
+ Lastest.txt  'mar 4'  'Mar 5'
+➜  Docker git:(3586936) ✗ cd Mar\   
+cd: no such file or directory: Mar 
+➜  Docker git:(3586936) ✗ cd Mar\ 5
+➜  Mar 5 git:(3586936) ✗ ls
+'commands to containerized mongo image'  'Create MongoDb Image'  'Dockerfile conect mongo'  'error setup lazydocker.txt'   git.txt  'Install & Set up lazydocker'   Volumes
+➜  Mar 5 git:(3586936) ✗ cd Volumes/api      
+➜  api git:(3586936) ✗ ls
+app.js  Dockerfile  node  package.json  package-lock.json
+➜  api git:(3586936) ✗ docker build -t myapp9:v1  
+ERROR: "docker buildx build" requires exactly 1 argument.
+See 'docker buildx build --help'.
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Start a build
+➜  api git:(3586936) ✗ docker build -t myapp9:v1 . 
+[+] Building 1.9s (11/11) FINISHED                                                                                                                                     docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                             0.0s
+ => => transferring dockerfile: 232B                                                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/node:17-alpine                                                                                                                1.8s
+ => [internal] load .dockerignore                                                                                                                                                0.0s
+ => => transferring context: 52B                                                                                                                                                 0.0s
+ => [1/6] FROM docker.io/library/node:17-alpine@sha256:76e638eb0d73ac5f0b76d70df3ce1ddad941ac63595d44092b625e2cd557ddbf                                                          0.0s
+ => [internal] load build context                                                                                                                                                0.0s
+ => => transferring context: 906B                                                                                                                                                0.0s
+ => CACHED [2/6] RUN npm install -g nodemon                                                                                                                                      0.0s
+ => CACHED [3/6] WORKDIR /app                                                                                                                                                    0.0s
+ => CACHED [4/6] COPY package.json .                                                                                                                                             0.0s
+ => CACHED [5/6] RUN npm install                                                                                                                                                 0.0s
+ => [6/6] COPY . .                                                                                                                                                               0.0s
+ => exporting to image                                                                                                                                                           0.0s
+ => => exporting layers                                                                                                                                                          0.0s
+ => => writing image sha256:1e2b596de63c9c17ec6e34d7886592110e20c5d617954478725b885c92476e95                                                                                     0.0s
+ => => naming to docker.io/library/myapp9:v1                                                                                                                                     0.0s
+
+What's Next?
+  1. Sign in to your Docker account → docker login
+  2. View a summary of image vulnerabilities and recommendations → docker scout quickview
+➜  api git:(3586936) ✗ docker images              
+REPOSITORY   TAG        IMAGE ID       CREATED              SIZE
+myapp9       v1         1e2b596de63c   About a minute ago   178MB
+myapp6       v1         296ffe4d7639   2 hours ago          178MB
+myapp        latest     c30832740da4   26 hours ago         173MB
+myapp3       withoutP   765f92d63b89   4 days ago           756MB
+mongo        latest     ae65e0087c07   4 days ago           756MB
+mymongo1     latest     dfaca011712c   4 days ago           756MB
+mymongo      latest     dfaca011712c   4 days ago           756MB
+➜  api git:(3586936) ✗ docker run --name myapp_c_nodemon -p 4000:4000 --rm -v /home/rnd/Documents/Training/DevOps-Internship/Docker/Mar\ 5/Volumes/api:/app -v /app/node/modules myapp
+9:v1
+
+> complete-docker@1.0.0 dev
+> nodemon -L app.js
+
+[nodemon] 3.1.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node app.js`
+node:internal/modules/cjs/loader:936
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /app/app.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:999:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/app/app.js:1:17)
+    at Module._compile (node:internal/modules/cjs/loader:1099:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:975:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/app/app.js' ]
+}
+
+Node.js v17.9.1
+[nodemon] app crashed - waiting for file changes before starting...
+^C%                                                                                                                                                                                   
+➜  api git:(3586936) ✗ docker run --name myapp_c_nodemon -p 4000:4000 --rm -v /app/node/modules myapp9:v1 
+
+> complete-docker@1.0.0 dev
+> nodemon -L app.js
+
+[nodemon] 3.1.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node app.js`
+listening for requests on port 4000
+^C%                                                                                                                                                                                   
+➜  api git:(3586936) ✗ docker run --name myapp_c_nodemon -p 4000:4000 --rm -v /app/node/modules myapp9:v1
+
+> complete-docker@1.0.0 dev
+> nodemon -L app.js
+
+[nodemon] 3.1.0
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node app.js`
+listening for requests on port 4000
+^C%                                                                                                                                                                                   
+➜  api git:(3586936) ✗ docker run --name myapp_c_nodemon -p 4000:4000 --rm -v /home/rnd/Documents/Training/DevOps-Internship/Docker/Mar\ 5/Volumes/api:/app -v /app/node/modules myapp9:v1
