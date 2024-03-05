@@ -1,0 +1,38 @@
+                                         
+➜  Create MongoDb Image docker run --name mymongo111 -d -p 27017:27017 mongo
+aed0997b5e1d1f7277c13edf03f1333be3e1d43584067eb83c1d847497f3774c
+
+➜  Create MongoDb Image docker run --name mymongo1111 -d -p 27017:27017 dfaca011712c 
+faf86e963dbb54215018f265b2437adb5006cccf7c2d8474e6c239faceb454a1
+docker: Error response from daemon: driver failed programming external connectivity on endpoint mymongo1111 (8b251a2538a4406cf1856f4499177f8ce8000e092377db064aa630981ec7d789): 
+Bind for 0.0.0.0:27017 failed: port is already allocated.
+  
+➜  Create MongoDb Image docker ps                                                    
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS              PORTS                                           NAMES
+aed0997b5e1d   mongo          "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:27017->27017/tcp, :::27017->27017/tcp   mymongo111
+ec579e248684   mongo          "docker-entrypoint.s…"   43 minutes ago       Up 43 minutes       0.0.0.0:27023->27017/tcp, :::27023->27017/tcp   mongo_v1
+8fb098a5d4da   dfaca011712c   "docker-entrypoint.s…"   16 hours ago         Up About an hour    27017/tcp                                       elegant_tu
+
+➜  Create MongoDb Image docker stop aed0997b5e1d
+aed0997b5e1d
+
+➜  Create MongoDb Image docker run --name mymongo11111 -d -p 27017:27017 dfaca011712c 
+d86b41cdac108fb023b492d8eb9299f3b70b1c8663a16d39e2a3a6482cec259c
+
+➜  Create MongoDb Image docker ps   
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS             PORTS                                           NAMES
+d86b41cdac10   dfaca011712c   "docker-entrypoint.s…"   17 seconds ago   Up 16 seconds      0.0.0.0:27017->27017/tcp, :::27017->27017/tcp   mymongo11111
+ec579e248684   mongo          "docker-entrypoint.s…"   46 minutes ago   Up 46 minutes      0.0.0.0:27023->27017/tcp, :::27023->27017/tcp   mongo_v1
+8fb098a5d4da   dfaca011712c   "docker-entrypoint.s…"   16 hours ago     Up About an hour   27017/tcp                                       elegant_tu                                               
+➜  Create MongoDb Image docker stop 8fb098a5d4da                                      
+8fb098a5d4da
+
+➜  Create MongoDb Image docker ps                
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS              PORTS                                           NAMES
+d86b41cdac10   dfaca011712c   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:27017->27017/tcp, :::27017->27017/tcp   mymongo11111
+ec579e248684   mongo          "docker-entrypoint.s…"   47 minutes ago       Up 47 minutes       0.0.0.0:27023->27017/tcp, :::27023->27017/tcp   mongo_v1
+
+➜  Create MongoDb Image docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+d86b41cdac10   dfaca011712c   "docker-entrypoint.s…"   3 minutes ago    Up 3 minutes    0.0.0.0:27017->27017/tcp, :::27017->27017/tcp   mymongo11111
+ec579e248684   mongo          "docker-entrypoint.s…"   50 minutes ago   Up 49 minutes   0.0.0.0:27023->27017/tcp, :::27023->27017/tcp   mongo_v1
