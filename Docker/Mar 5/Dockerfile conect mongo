@@ -1,0 +1,53 @@
+➜  Create MongoDb Image docker images            
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+myapp         latest    c30832740da4   18 hours ago    173MB
+mymongo1      latest    dfaca011712c   4 days ago      756MB
+mymongo       latest    dfaca011712c   4 days ago      756MB
+<none>        <none>    5ca15a17d408   4 days ago      756MB
+<none>        <none>    838dd65b2f2d   4 days ago      756MB
+mongo         latest    ae65e0087c07   4 days ago      756MB
+hello-world   latest    d2c94e258dcb   10 months ago   13.3kB
+➜  Create MongoDb Image docker search mongo
+NAME                                      DESCRIPTION                                     STARS     OFFICIAL
+mongo                                     MongoDB document databases provide high avai…   10104     [OK]
+mongo-express                             Web-based MongoDB admin interface, written w…   1414      [OK]
+bitnami/mongodb                           Bitnami MongoDB Docker Image                    246       
+bitnami/mongodb-exporter                                                                  12        
+percona/mongodb_exporter                  A Prometheus exporter for MongoDB including …   9         
+bitnami/mongodb-sharded                                                                   11        
+rapidfort/mongodb                         RapidFort optimized, hardened image for Mong…   23        
+rapidfort/mongodb-official                RapidFort optimized, hardened image for Mong…   12        
+rapidfort/mongodb-ib                      RapidFort optimized, hardened image for Mong…   10        
+rancher/mongodb-conf                      This container image is no longer maintained…   2         
+bitnamicharts/mongodb                                                                     1         
+rapidfort/mongodb-perfomance-test                                                         10        
+bitnamicharts/mongodb-sharded                                                             0         
+rancher/mongodb-config                                                                    0         
+litmuschaos/mongo                                                                         1         
+noenv/mongo-exporter                      Prometheus MongoDB Exporter Docker Image        2         
+formio/mongotest                                                                          0         
+corpusops/mongo                           https://github.com/corpusops/docker-images/     0         
+noenv/mongo                               MongoDB Docker Image                            0         
+litmuschaos/mongo-utils                                                                   0         
+drud/mongodb                              Mongodb                                         0         
+proxeus/mongo-dev-cluster                                                                 0         
+vulhub/mongo-express                                                                      0         
+percona/percona-server-mongodb            Percona Server for MongoDB docker images        40        
+percona/percona-server-mongodb-operator   mongod image for PSMDB operator                 4         
+➜  Create MongoDb Image docker create mongo
+63961490e20920937030a3e4feb11557344416b78d4d5d83e3048650c355a1eb
+➜  Create MongoDb Image docker ps          
+CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS          PORTS       NAMES
+8fb098a5d4da   dfaca011712c   "docker-entrypoint.s…"   15 hours ago   Up 18 minutes   27017/tcp   elegant_tu
+➜  Create MongoDb Image docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                    PORTS       NAMES
+63961490e209   mongo          "docker-entrypoint.s…"   About a minute ago   Created                               boring_elion
+8fb098a5d4da   dfaca011712c   "docker-entrypoint.s…"   15 hours ago         Up 19 minutes             27017/tcp   elegant_tu
+107436847fac   838dd65b2f2d   "docker-entrypoint.s…"   17 hours ago         Exited (0) 16 hours ago               condescending_gauss
+c05d809a0f9b   hello-world    "/hello"                 22 hours ago         Exited (0) 22 hours ago               blissful_driscoll
+➜  Create MongoDb Image docker run --name mongo_v1 -d -p 27023:27017 mongo
+ec579e2486841d564bf2ce14ec9b29ba21dcabeed6ec43ea63894c147a6861e4
+➜  Create MongoDb Image docker ps                                         
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+ec579e248684   mongo          "docker-entrypoint.s…"   20 seconds ago   Up 20 seconds   0.0.0.0:27023->27017/tcp, :::27023->27017/tcp   mongo_v1
+8fb098a5d4da   dfaca011712c   "docker-entrypoint.s…"   15 hours ago     Up 22 minutes   27017/tcp                                       elegant_tu
