@@ -1,0 +1,63 @@
+  ~ lazydocker
+zsh: command not found: lazydocker
+➜  ~ vi ~/.bashrc        
+➜  ~ /.local/bin/lazydocker
+zsh: no such file or directory: /.local/bin/lazydocker
+➜  ~ which lazydocker      
+lazydocker not found
+➜  ~ locate lazydocker
+/home/rnd/lazydocker
+/home/rnd/.config/lazydocker
+/home/rnd/.config/lazydocker/config.yml
+/home/rnd/.local/bin/lazydocker
+➜  ~ /home/rnd/.local/bin/lazydocker
+➜  ~ vi ~/.bashrc                  
+➜  ~ vi ~/.zshrc 
+➜  ~ source ~/.zshrc 
+➜  ~ lazydocker
+zsh: command not found: lazydocker
+➜  ~ vi ~/.zshrc    
+➜  ~ source ~/.zshrc
+➜  ~ lazydocker
+zsh: command not found: lazydocker
+➜  ~ $HOME          
+➜  ~ echo lazydocker
+lazydocker
+➜  ~ echo $HOME     
+/home/rnd
+➜  ~ tail ~/.zshrc  
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+export PATH=$PATH:$HOME/.local/bin/lazydocker
+➜  ~ /home/rnd/.local/bin/lazydocker
+➜  ~ vi ~/.zshrc            
+➜  ~ source ~/.zshrc                
+➜  ~ lazydocker
+zsh: command not found: lazydocker
+➜  ~ vi ~/.zshrc    
+➜  ~ source ~/.zshrc
+/home/rnd/.zshrc:107: no such file or directory: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rnd/.local/bin/lazydocker:/home/rnd/.local/bin/lazydocker=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rnd/.local/bin/lazydocker:/home/rnd/.local/bin/lazydocker:/home/rnd/.local/bin/lazydocker
+➜  ~ /home/rnd/.local/bin/lazydocker
+➜  ~ source ~/.zshrc                
+/home/rnd/.zshrc:107: no such file or directory: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rnd/.local/bin/lazydocker:/home/rnd/.local/bin/lazydocker=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rnd/.local/bin/lazydocker:/home/rnd/.local/bin/lazydocker:/home/rnd/.local/bin/lazydocker
+➜  ~ vi ~/.zshrc                
+➜  ~ source ~/.zshrc
+/home/rnd/.zshrc:export:107: not valid in this context: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rnd/.local/bin/lazydocker:/home/rnd/.local/bin/lazydocker
+➜  ~ vi ~/.zshrc    
+➜  ~ source ~/.zshrc
+➜  ~ lazydocker
+zsh: command not found: lazydocker
+➜  ~ 
+➜  ~ vi ~/.zshrc    
+➜  ~ source ~/.zshrc
+➜  ~ lazydocker     
+➜  ~ lazydocker
+➜  ~ lazydocker
+
