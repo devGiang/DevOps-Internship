@@ -1,0 +1,5 @@
+docker pull mongo
+docker create mongo
+docker ps –a
+docker run --name mongo_v1 -d -p 27023:27017 mongo
+mongodb://localhost:27023
