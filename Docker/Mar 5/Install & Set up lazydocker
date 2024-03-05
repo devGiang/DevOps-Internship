@@ -1,0 +1,62 @@
+    1  \n\nsh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"\n
+    2  ll /home/rnd/.oh-my-zsh
+    3  git clone https://github.com/zsh-users/zsh-autosuggestions /home/rnd/.oh-my-zsh/plugins/zsh-autosuggestions\n\n
+    4  vi ~/.zshrc
+    5  sudo groupadd docker
+    6  sudo usermod -aG docker $USER
+    7  docker ps
+    8  lazydocker
+    9  locate
+   10  apt install plocate
+   11  sudo apt install plocate
+   12  locate lazydocker
+   13  lazydocker
+   14  bash
+   15  ls
+   18  source ~/.bashrc
+   19  lazydocker
+   20  vi ~/.bashrc
+   21  /.local/bin/lazydocker
+   22  which lazydocker
+   23  locate lazydocker
+   24  /home/rnd/.local/bin/lazydocker
+   25  vi ~/.bashrc
+   26  vi ~/.zshrc
+   27  source ~/.zshrc
+   28  lazydocker
+   29  vi ~/.zshrc
+   30  source ~/.zshrc
+   51  lazydocker
+   52 docker ps
+   
+////////////////////////////////// If error
+   31  lazydocker
+   32  $HOME
+   33  echo lazydocker
+   34  echo $HOME
+   35  tail ~/.zshrc
+   36  /home/rnd/.local/bin/lazydocker
+   39  lazydocker
+   42  /home/rnd/.local/bin/lazydocker
+   43  source ~/.zshrc
+   44  vi ~/.zshrc
+   45  source ~/.zshrc
+   46  vi ~/.zshrc
+   47  source ~/.zshrc
+   48  lazydocker
+   49  vi ~/.zshrc
+   50  source ~/.zshrc
+   51  lazydocker
+   52  docker ps
+   53  docker logs elegant_tu -f
+   54  vi ~/.zshrc
+   55  exit
+
+///////////////////////////////////////////
+   56  docker images
+   57  docker search mongo
+   58  docker create mongo
+   59  docker ps
+   60  docker ps -a
+   61  docker run --name mongo_v1 -d -p 27023:27017 mongo
+   62  docker ps
